@@ -1,0 +1,1633 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>cellTree with maptpx - dynmethods automated testing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <div class="bg-dark navbar-brand" style="width:100%">
+              <a href="https://github.com/dynverse/dynmethods">
+                <img id="logo" src="img/logo.png">
+              </a>
+              <div id="logo">
+                <a href="index.html">
+                Automated testing
+                </a>
+              </div>
+            </div>
+            <div>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Overview</a>
+    </li>
+  </ul>
+  <h6 class="sizebar-heading d-flex justify-content-between align-items-center text-muted px-3 mt-4 mb-1">
+    <span>Methods</span>
+  </h6>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="angle.html">
+        <div>
+          Angle
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="cellrouter.html">
+        <div>
+          CellRouter
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="celltrails.html">
+        <div>
+          CellTrails
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="celltree_gibbs.html">
+        <div>
+          cellTree with gibbs
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="celltree_maptpx.html">
+        <div>
+          cellTree with maptpx
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="celltree_vem.html">
+        <div>
+          cellTree with vem
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="comp1.html">
+        <div>
+          Component 1
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="dpt.html">
+        <div>
+          DPT
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="elpicycle.html">
+        <div>
+          ElPiGraph cyclic
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="elpigraph.html">
+        <div>
+          ElPiGraph
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="elpilinear.html">
+        <div>
+          ElPiGraph linear
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="embeddr.html">
+        <div>
+          Embeddr
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="error.html">
+        <div>
+          Control: error
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="fateid.html">
+        <div>
+          FateID
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="gng.html">
+        <div>
+          Growing Neural Gas
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="gpfates.html">
+        <div>
+          GPfates
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="grandprix.html">
+        <div>
+          GrandPrix
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="identity.html">
+        <div>
+          Control: identity
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="matcher.html">
+        <div>
+          MATCHER
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="merlot.html">
+        <div>
+          MERLoT
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="mfa.html">
+        <div>
+          mfa
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="monocle_ddrtree.html">
+        <div>
+          Monocle DDRTree
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="monocle_ica.html">
+        <div>
+          Monocle ICA
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="mpath.html">
+        <div>
+          Mpath
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="ouija.html">
+        <div>
+          ouija
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="ouijaflow.html">
+        <div>
+          ouijaflow
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="paga.html">
+        <div>
+          PAGA
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pcreode.html">
+        <div>
+          pCreode
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="periodpc.html">
+        <div>
+          Periodic PrinCurve
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="phenopath.html">
+        <div>
+          PhenoPath
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="praga.html">
+        <div>
+          projected PAGA
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pseudogp.html">
+        <div>
+          pseudogp
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="random.html">
+        <div>
+          Control: random
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="recat.html">
+        <div>
+          reCAT
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="scimitar.html">
+        <div>
+          SCIMITAR
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF851B; font-size: 1em" title="memory_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 640 512"><path d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="scorpius.html">
+        <div>
+          SCORPIUS
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="scoup.html">
+        <div>
+          SCOUP
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FFDC00; font-size: 1em" title="time_limit">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="scuba.html">
+        <div>
+          SCUBA
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="shuffle.html">
+        <div>
+          Control: shuffle
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="sincell.html">
+        <div>
+          Sincell
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="slice.html">
+        <div>
+          SLICE
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="slicer.html">
+        <div>
+          SLICER
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="slingshot.html">
+        <div>
+          Slingshot
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="stemid.html">
+        <div>
+          StemID
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="stemid2.html">
+        <div>
+          StemID2
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="stemnet.html">
+        <div>
+          STEMNET
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="topslam.html">
+        <div>
+          topslam
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="tscan.html">
+        <div>
+          TSCAN
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="wanderlust.html">
+        <div>
+          wanderlust
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="waterfall.html">
+        <div>
+          Waterfall
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="wishbone.html">
+        <div>
+          Wishbone
+          <span style="float: right">
+            <span class="badge badge-secondary" style="background-color: #FF4136; font-size: 1em" title="method_error">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+              
+            </span>
+            <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+              <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+              
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">cellTree with maptpx</h1>
+          </div>
+
+          <div>
+            <div>
+  <nav>
+    <div class="nav nav-tabs">
+      <a class="nav-item nav-link active" data-toggle="tab" href="#toy_bifurcating_1">
+        toy/bifurcating_1
+        <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+          <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+          Success
+        </span>
+      </a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#toy_linear_1">
+        toy/linear_1
+        <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+          <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+          Success
+        </span>
+      </a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#real_developing_dendritic_cells_schlitzer">
+        real/developing-dendritic-cells_schlitzer
+        <span class="badge badge-secondary" style="background-color: #39CCCC; font-size: 1em" title="low_correlation">
+          <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"/></svg>
+          Low correlation
+        </span>
+      </a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#real_fibroblast_reprogramming_treutlein">
+        real/fibroblast-reprogramming_treutlein
+        <span class="badge badge-secondary" style="background-color: #2ECC40; font-size: 1em" title="success">
+          <svg style="height:0.8em;top:.04em;position:relative;fill:white;" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+          Success
+        </span>
+      </a>
+    </div>
+  </nav>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="toy_bifurcating_1">
+      <div>
+        <div>
+          <img src="img/celltree_maptpx_1_plot_cells.png" style="max-width: 400px; max-height: 400px"/>
+          <img src="img/celltree_maptpx_1_plot_topology.png" style="max-width: 400px; max-height: 400px"/>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stdout" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stdout
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stdout">
+            <div class="card-body">
+              <code>Input saved to /home/wouters/tmp//RtmpfPWPeN/input: <br>	data.rds<br>	params.json<br>Attaching package: ‘dplyr’<br>The following objects are masked from ‘package:stats’:<br>    filter, lag<br>The following objects are masked from ‘package:base’:<br>    intersect, setdiff, setequal, union<br>Attaching package: ‘purrr’<br>The following object is masked from ‘package:jsonlite’:<br>    flatten<br>Loading required package: topGO<br>Loading required package: BiocGenerics<br>Loading required package: parallel<br>Attaching package: ‘BiocGenerics’<br>The following objects are masked from ‘package:parallel’:<br>    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,<br>    clusterExport, clusterMap, parApply, parCapply, parLapply,<br>    parLapplyLB, parRapply, parSapply, parSapplyLB<br>The following objects are masked from ‘package:dplyr’:<br>    combine, intersect, setdiff, union<br>The following objects are masked from ‘package:stats’:<br>    IQR, mad, sd, var, xtabs<br>The following objects are masked from ‘package:base’:<br>    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,<br>    colnames, colSums, dirname, do.call, duplicated, eval, evalq,<br>    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,<br>    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,<br>    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,<br>    rowSums, sapply, setdiff, sort, table, tapply, union, unique,<br>    unsplit, which, which.max, which.min<br>Loading required package: graph<br>Loading required package: Biobase<br>Welcome to Bioconductor<br>    Vignettes contain introductory material; view with<br>    'browseVignettes()'. To cite Bioconductor, see<br>    'citation("Biobase")', and for packages 'citation("pkgname")'.<br>Attaching package: ‘Biobase’<br>The following object is masked from ‘package:dplyr’:<br>    exprs<br>Loading required package: GO.db<br>Loading required package: AnnotationDbi<br>Loading required package: stats4<br>Loading required package: IRanges<br>Loading required package: S4Vectors<br>Attaching package: ‘S4Vectors’<br>The following objects are masked from ‘package:dplyr’:<br>    first, rename<br>The following object is masked from ‘package:base’:<br>    expand.grid<br>Attaching package: ‘IRanges’<br>The following object is masked from ‘package:purrr’:<br>    reduce<br>The following objects are masked from ‘package:dplyr’:<br>    collapse, desc, slice<br>Attaching package: ‘AnnotationDbi’<br>The following object is masked from ‘package:dplyr’:<br>    select<br>Loading required package: SparseM<br>Attaching package: ‘SparseM’<br>The following object is masked from ‘package:base’:<br>    backsolve<br>groupGOTerms: 	GOBPTerm, GOMFTerm, GOCCTerm environments built.<br>Attaching package: ‘topGO’<br>The following object is masked from ‘package:IRanges’:<br>    members<br>Computing LDA model using: maptpx<br>Filtering out rows with standard deviation < 0.5 (94 -> 94)...<br>Loading required namespace: maptpx<br>Estimating on a 197 document collection.<br>Fit and Bayes Factor Estimation for K = 2 ... 15<br>log posterior increase: 101.9, done.<br>log BF( 2 ) = 10887.22<br>log posterior increase: 524.03, done.<br>log BF( 3 ) = 15044.74<br>log posterior increase: 294.86, done.<br>log BF( 4 ) = 15477.75<br>log posterior increase: 214.03, 65.16, done.<br>log BF( 5 ) = 16273.35<br>log posterior increase: 110.91, 36.33, done.<br>log BF( 6 ) = 17213.37<br>log posterior increase: 83.41, done.<br>log BF( 7 ) = 17738.14<br>log posterior increase: 87.58, 9.76, done.<br>log BF( 8 ) = 18288.2<br>log posterior increase: 30.55, done.<br>log BF( 9 ) = 18907.04<br>log posterior increase: 41.33, 13.8, done.<br>log BF( 10 ) = 19448.46<br>log posterior increase: 39.15, 8.47, 9.23, 8.2, 2.87, done.<br>log BF( 11 ) = 19938.54<br>log posterior increase: 12.07, done.<br>log BF( 12 ) = 20823.03<br>log posterior increase: 16.06, done.<br>log BF( 13 ) = 21613.12<br>log posterior increase: 14.23, done.<br>log BF( 14 ) = 22403.45<br>log posterior increase: 15.77, done.<br>log BF( 15 ) = 23190.06<br>Selected k = 15 topics<br>Using rooting method: longest.path<br>Using root vertex: 74<br>Adding branch #1:<br> [1] 151 111 175  91 101 107  49 185 162 117 182 142  87 150 192 191  21  37 177<br>[20] 168  57 153 170 139  13  92  64   9  69 173 178 169  78 123 112 109  18 121<br>[39]  14  26  31 144 102  85 187  98 181  97 190 186 158 171 180  12 103 124 145<br>[58] 176  53  67 128 179  80  36  29 165  90 159 137 138   4 105 163 119  20 167<br>[77] 194  47  77  30  94 132 164  95 130  45<br>Using branch width: 0.999 (width.scale.factor: 1.5)<br>Outliers: 3<br>Total number of branches: 1 (forks: 0)<br>Backbone fork merge (width: 0.999): 87 ->  87 <br>Ranking all cells...<br>Computing tree layout...output saved in /home/wouters/tmp//RtmpfPWPeN/output: <br>	output.rds<br></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stderr" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stderr
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stderr">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#error_message" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                error_message
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="error_message">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="toy_linear_1">
+      <div>
+        <div>
+          <img src="img/celltree_maptpx_2_plot_cells.png" style="max-width: 400px; max-height: 400px"/>
+          <img src="img/celltree_maptpx_2_plot_topology.png" style="max-width: 400px; max-height: 400px"/>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stdout" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stdout
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stdout">
+            <div class="card-body">
+              <code>Input saved to /home/wouters/tmp//RtmpnpYgFP/input: <br>	data.rds<br>	params.json<br>Attaching package: ‘dplyr’<br>The following objects are masked from ‘package:stats’:<br>    filter, lag<br>The following objects are masked from ‘package:base’:<br>    intersect, setdiff, setequal, union<br>Attaching package: ‘purrr’<br>The following object is masked from ‘package:jsonlite’:<br>    flatten<br>Loading required package: topGO<br>Loading required package: BiocGenerics<br>Loading required package: parallel<br>Attaching package: ‘BiocGenerics’<br>The following objects are masked from ‘package:parallel’:<br>    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,<br>    clusterExport, clusterMap, parApply, parCapply, parLapply,<br>    parLapplyLB, parRapply, parSapply, parSapplyLB<br>The following objects are masked from ‘package:dplyr’:<br>    combine, intersect, setdiff, union<br>The following objects are masked from ‘package:stats’:<br>    IQR, mad, sd, var, xtabs<br>The following objects are masked from ‘package:base’:<br>    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,<br>    colnames, colSums, dirname, do.call, duplicated, eval, evalq,<br>    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,<br>    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,<br>    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,<br>    rowSums, sapply, setdiff, sort, table, tapply, union, unique,<br>    unsplit, which, which.max, which.min<br>Loading required package: graph<br>Loading required package: Biobase<br>Welcome to Bioconductor<br>    Vignettes contain introductory material; view with<br>    'browseVignettes()'. To cite Bioconductor, see<br>    'citation("Biobase")', and for packages 'citation("pkgname")'.<br>Attaching package: ‘Biobase’<br>The following object is masked from ‘package:dplyr’:<br>    exprs<br>Loading required package: GO.db<br>Loading required package: AnnotationDbi<br>Loading required package: stats4<br>Loading required package: IRanges<br>Loading required package: S4Vectors<br>Attaching package: ‘S4Vectors’<br>The following objects are masked from ‘package:dplyr’:<br>    first, rename<br>The following object is masked from ‘package:base’:<br>    expand.grid<br>Attaching package: ‘IRanges’<br>The following object is masked from ‘package:purrr’:<br>    reduce<br>The following objects are masked from ‘package:dplyr’:<br>    collapse, desc, slice<br>Attaching package: ‘AnnotationDbi’<br>The following object is masked from ‘package:dplyr’:<br>    select<br>Loading required package: SparseM<br>Attaching package: ‘SparseM’<br>The following object is masked from ‘package:base’:<br>    backsolve<br>groupGOTerms: 	GOBPTerm, GOMFTerm, GOCCTerm environments built.<br>Attaching package: ‘topGO’<br>The following object is masked from ‘package:IRanges’:<br>    members<br>Computing LDA model using: maptpx<br>Filtering out rows with standard deviation < 0.5 (67 -> 52)...<br>Loading required namespace: maptpx<br>Estimating on a 200 document collection.<br>Fit and Bayes Factor Estimation for K = 2 ... 15<br>log posterior increase: 481.4, done.<br>log BF( 2 ) = 4592.18<br>log posterior increase: 515.8, done.<br>log BF( 3 ) = 6012.19<br>log posterior increase: 149.55, done.<br>log BF( 4 ) = 6798.53<br>log posterior increase: 94.45, done.<br>log BF( 5 ) = 7266.41<br>log posterior increase: 69.24, 72.03, 3.34, done.<br>log BF( 6 ) = 8358.47<br>log posterior increase: 32.35, done.<br>log BF( 7 ) = 8913.26<br>log posterior increase: 30.86, done.<br>log BF( 8 ) = 9527.87<br>log posterior increase: 18.71, done.<br>log BF( 9 ) = 10199.05<br>log posterior increase: 25.07, done.<br>log BF( 10 ) = 10826.48<br>log posterior increase: 11.26, done.<br>log BF( 11 ) = 11579.11<br>log posterior increase: 15.34, done.<br>log BF( 12 ) = 12251.31<br>log posterior increase: 8.67, done.<br>log BF( 13 ) = 12988.04<br>log posterior increase: 10.67, done.<br>log BF( 14 ) = 13711.59<br>log posterior increase: 7.31, done.<br>log BF( 15 ) = 14514.45<br>Selected k = 15 topics<br>Using rooting method: longest.path<br>Using root vertex: 130<br>Adding branch #1:<br> [1] 125 127 124  40  36  81 166   1 185 162  63  71 190  38 111  43  61  34  69<br>[20]  75 104 121  46  85  11 146  17 160  64 120  35 147 103  14 102  51 158  73<br>[39] 151  65  15 153 148  91 131 116 141  10  76 135 133 140  21   7 188  44 163<br>[58] 192  45 149 134 122 179   8   5  47 194 154 129 107  80  60 108  18   6 105<br>[77]  16 173 181 144 142 139  32 138 145  90  78 172  93  24  30  23 119  94 200<br>[96]  48<br>Using branch width: 1.08 (width.scale.factor: 1.5)<br>Outliers: 0<br>Total number of branches: 1 (forks: 0)<br>Backbone fork merge (width: 1.08): 97 ->  97 <br>Ranking all cells...<br>Computing tree layout...output saved in /home/wouters/tmp//RtmpnpYgFP/output: <br>	output.rds<br></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stderr" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stderr
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stderr">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#error_message" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                error_message
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="error_message">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="real_developing_dendritic_cells_schlitzer">
+      <div>
+        <div>
+          <img src="img/celltree_maptpx_3_plot_cells.png" style="max-width: 400px; max-height: 400px"/>
+          <img src="img/celltree_maptpx_3_plot_topology.png" style="max-width: 400px; max-height: 400px"/>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stdout" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stdout
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stdout">
+            <div class="card-body">
+              <code>Input saved to /home/wouters/tmp//Rtmp8DQgIP/input: <br>	data.rds<br>	params.json<br>Attaching package: ‘dplyr’<br>The following objects are masked from ‘package:stats’:<br>    filter, lag<br>The following objects are masked from ‘package:base’:<br>    intersect, setdiff, setequal, union<br>Attaching package: ‘purrr’<br>The following object is masked from ‘package:jsonlite’:<br>    flatten<br>Loading required package: topGO<br>Loading required package: BiocGenerics<br>Loading required package: parallel<br>Attaching package: ‘BiocGenerics’<br>The following objects are masked from ‘package:parallel’:<br>    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,<br>    clusterExport, clusterMap, parApply, parCapply, parLapply,<br>    parLapplyLB, parRapply, parSapply, parSapplyLB<br>The following objects are masked from ‘package:dplyr’:<br>    combine, intersect, setdiff, union<br>The following objects are masked from ‘package:stats’:<br>    IQR, mad, sd, var, xtabs<br>The following objects are masked from ‘package:base’:<br>    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,<br>    colnames, colSums, dirname, do.call, duplicated, eval, evalq,<br>    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,<br>    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,<br>    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,<br>    rowSums, sapply, setdiff, sort, table, tapply, union, unique,<br>    unsplit, which, which.max, which.min<br>Loading required package: graph<br>Loading required package: Biobase<br>Welcome to Bioconductor<br>    Vignettes contain introductory material; view with<br>    'browseVignettes()'. To cite Bioconductor, see<br>    'citation("Biobase")', and for packages 'citation("pkgname")'.<br>Attaching package: ‘Biobase’<br>The following object is masked from ‘package:dplyr’:<br>    exprs<br>Loading required package: GO.db<br>Loading required package: AnnotationDbi<br>Loading required package: stats4<br>Loading required package: IRanges<br>Loading required package: S4Vectors<br>Attaching package: ‘S4Vectors’<br>The following objects are masked from ‘package:dplyr’:<br>    first, rename<br>The following object is masked from ‘package:base’:<br>    expand.grid<br>Attaching package: ‘IRanges’<br>The following object is masked from ‘package:purrr’:<br>    reduce<br>The following objects are masked from ‘package:dplyr’:<br>    collapse, desc, slice<br>Attaching package: ‘AnnotationDbi’<br>The following object is masked from ‘package:dplyr’:<br>    select<br>Loading required package: SparseM<br>Attaching package: ‘SparseM’<br>The following object is masked from ‘package:base’:<br>    backsolve<br>groupGOTerms: 	GOBPTerm, GOMFTerm, GOCCTerm environments built.<br>Attaching package: ‘topGO’<br>The following object is masked from ‘package:IRanges’:<br>    members<br>Computing LDA model using: maptpx<br>Filtering out rows with standard deviation < 0.5 (3551 -> 3551)...<br>Loading required namespace: maptpx<br>Estimating on a 238 document collection.<br>Fit and Bayes Factor Estimation for K = 2 ... 15<br>log posterior increase: 9.78, done.<br>log BF( 2 ) = 11487.61<br>log posterior increase: 1388.79, done.<br>log BF( 3 ) = 36794.28<br>log posterior increase: 3943.36, 514.05, 271.75, done.<br>log BF( 4 ) = 46816.49<br>log posterior increase: 3230.92, 533.77, 328.09, done.<br>log BF( 5 ) = 55224.83<br>log posterior increase: 2114.82, 314.81, 185.07, done.<br>log BF( 6 ) = 60709.34<br>log posterior increase: 1391.27, 326.32, 279.01, 235.03, 190, done.<br>log BF( 7 ) = 67327.6<br>log posterior increase: 813.23, 261.01, 168.77, 116.77, done.<br>log BF( 8 ) = 73134.44<br>log posterior increase: 658.89, 198.41, 145.63, 117.49, done.<br>log BF( 9 ) = 77078.85<br>log posterior increase: 553.37, 189.43, 135.27, 104.94, done.<br>log BF( 10 ) = 79987.54<br>log posterior increase: 423.95, 154.71, 102.15, done.<br>log BF( 11 ) = 83263.25<br>log posterior increase: 359.05, 132.97, 91.47, done.<br>log BF( 12 ) = 86954.9<br>log posterior increase: 372.36, 143.22, 102.21, 308.24, done.<br>log BF( 13 ) = 87831.76<br>log posterior increase: 328.71, 121.36, 78, done.<br>log BF( 14 ) = 92656.74<br>log posterior increase: 312.05, 134.81, 94.17, 256.37, done.<br>log BF( 15 ) = 89502.07<br>Selected k = 14 topics<br>Using rooting method: longest.path<br>Using root vertex: 112<br>Adding branch #1:<br> [1] 124 150 167 113 138 164 161 159 121 178 130  96 168 127 120 140 134  30  67<br>[20]  54  52  13  17  84 233 182 214 195 199 203 192 236 230 235 219 221 225 196<br>[39] 188 200 234 206 181 155<br>Using branch width: 1.64 (width.scale.factor: 1.5)<br>Outliers: 0<br>Total number of branches: 1 (forks: 0)<br>Backbone fork merge (width: 1.64): 45 ->  45 <br>Ranking all cells...<br>Computing tree layout...output saved in /home/wouters/tmp//Rtmp8DQgIP/output: <br>	output.rds<br></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stderr" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stderr
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stderr">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#error_message" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                error_message
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="error_message">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="real_fibroblast_reprogramming_treutlein">
+      <div>
+        <div>
+          <img src="img/celltree_maptpx_4_plot_cells.png" style="max-width: 400px; max-height: 400px"/>
+          <img src="img/celltree_maptpx_4_plot_topology.png" style="max-width: 400px; max-height: 400px"/>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stdout" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stdout
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stdout">
+            <div class="card-body">
+              <code>Input saved to /home/wouters/tmp//Rtmpq1kx3O/input: <br>	data.rds<br>	params.json<br>Attaching package: ‘dplyr’<br>The following objects are masked from ‘package:stats’:<br>    filter, lag<br>The following objects are masked from ‘package:base’:<br>    intersect, setdiff, setequal, union<br>Attaching package: ‘purrr’<br>The following object is masked from ‘package:jsonlite’:<br>    flatten<br>Loading required package: topGO<br>Loading required package: BiocGenerics<br>Loading required package: parallel<br>Attaching package: ‘BiocGenerics’<br>The following objects are masked from ‘package:parallel’:<br>    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,<br>    clusterExport, clusterMap, parApply, parCapply, parLapply,<br>    parLapplyLB, parRapply, parSapply, parSapplyLB<br>The following objects are masked from ‘package:dplyr’:<br>    combine, intersect, setdiff, union<br>The following objects are masked from ‘package:stats’:<br>    IQR, mad, sd, var, xtabs<br>The following objects are masked from ‘package:base’:<br>    anyDuplicated, append, as.data.frame, basename, cbind, colMeans,<br>    colnames, colSums, dirname, do.call, duplicated, eval, evalq,<br>    Filter, Find, get, grep, grepl, intersect, is.unsorted, lapply,<br>    lengths, Map, mapply, match, mget, order, paste, pmax, pmax.int,<br>    pmin, pmin.int, Position, rank, rbind, Reduce, rowMeans, rownames,<br>    rowSums, sapply, setdiff, sort, table, tapply, union, unique,<br>    unsplit, which, which.max, which.min<br>Loading required package: graph<br>Loading required package: Biobase<br>Welcome to Bioconductor<br>    Vignettes contain introductory material; view with<br>    'browseVignettes()'. To cite Bioconductor, see<br>    'citation("Biobase")', and for packages 'citation("pkgname")'.<br>Attaching package: ‘Biobase’<br>The following object is masked from ‘package:dplyr’:<br>    exprs<br>Loading required package: GO.db<br>Loading required package: AnnotationDbi<br>Loading required package: stats4<br>Loading required package: IRanges<br>Loading required package: S4Vectors<br>Attaching package: ‘S4Vectors’<br>The following objects are masked from ‘package:dplyr’:<br>    first, rename<br>The following object is masked from ‘package:base’:<br>    expand.grid<br>Attaching package: ‘IRanges’<br>The following object is masked from ‘package:purrr’:<br>    reduce<br>The following objects are masked from ‘package:dplyr’:<br>    collapse, desc, slice<br>Attaching package: ‘AnnotationDbi’<br>The following object is masked from ‘package:dplyr’:<br>    select<br>Loading required package: SparseM<br>Attaching package: ‘SparseM’<br>The following object is masked from ‘package:base’:<br>    backsolve<br>groupGOTerms: 	GOBPTerm, GOMFTerm, GOCCTerm environments built.<br>Attaching package: ‘topGO’<br>The following object is masked from ‘package:IRanges’:<br>    members<br>Computing LDA model using: maptpx<br>Filtering out rows with standard deviation < 0.5 (3843 -> 3843)...<br>Loading required namespace: maptpx<br>Estimating on a 355 document collection.<br>Fit and Bayes Factor Estimation for K = 2 ... 15<br>log posterior increase: 46.01, done.<br>log BF( 2 ) = 16136.71<br>log posterior increase: 6994.7, 2072.19, 714.27, done.<br>log BF( 3 ) = 121551.02<br>log posterior increase: 14517.94, 609.79, 268.04, done.<br>log BF( 4 ) = 135352.27<br>log posterior increase: 4367.54, 627.66, 954.74, 848.25, done.<br>log BF( 5 ) = 158477.98<br>log posterior increase: 3540.55, 488.17, 360.31, 326.11, 260.52, done.<br>log BF( 6 ) = 172880.41<br>log posterior increase: 2124.13, 227.15, done.<br>log BF( 7 ) = 179137.67<br>log posterior increase: 1695.55, 193.25, 133.65, 115.21, 106.41, done.<br>log BF( 8 ) = 182421.43<br>log posterior increase: 1079.75, 219.36, 190.83, 179.51, 158.22, 133.38, 116.2, done.<br>log BF( 9 ) = 185517.07<br>log posterior increase: 638.21, 174.74, 124.35, 98.62, done.<br>log BF( 10 ) = 192445.09<br>log posterior increase: 690.58, 160.46, 130.2, 110.81, 94.01, 81.12, 73.02, 70.21, done.<br>log BF( 11 ) = 191728.67<br>log posterior increase: 467.99, 144.18, 110.16, 96.99, done.<br>log BF( 12 ) = 198954.93<br>log posterior increase: 420.17, 150.1, 111.15, 94.73, 84.08, 74.75, 66.6, done.<br>log BF( 13 ) = 200939.48<br>log posterior increase: 352.18, 119.54, 87.19, 73.47, 65.14, 58.65, done.<br>log BF( 14 ) = 204914.1<br>log posterior increase: 323.49, 114.62, 89.69, 74.64, 63.7, 57.81, 56.13, 54.35, 51.48, done.<br>log BF( 15 ) = 201776.94<br>Selected k = 14 topics<br>Using rooting method: longest.path<br>Using root vertex: 332<br>Adding branch #1:<br> [1] 275 234 315 268 345 333 243 317 281 309 342 286 206 297 343 280 324 355 336<br>[20] 288 236 350 187 191 162 188 157 156 175 180 179 178 155 172 192 193  75  14<br>[39]  16  31  38  61  49  29  63  34  66  65  73  54  81  43  58  19  10   7 126<br>[58] 123 113 108  85 120 146 141 145 147 132 143  99 149 118   4<br>Using branch width: 1.79 (width.scale.factor: 1.5)<br>Outliers: 0<br>Total number of branches: 1 (forks: 0)<br>Backbone fork merge (width: 1.79): 73 ->  73 <br>Ranking all cells...<br>Computing tree layout...output saved in /home/wouters/tmp//Rtmpq1kx3O/output: <br>	output.rds<br></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#stderr" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                stderr
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="stderr">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#error_message" style="cursor: pointer">
+            <h5 class="mb-0">
+              <button class="btn btn-link">
+                <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                error_message
+              </button>
+            </h5>
+          </div>
+          <div class="collapse" id="error_message">
+            <div class="card-body">
+              <code></code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Our scripts -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
