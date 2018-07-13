@@ -6,10 +6,6 @@ tr.clickable-row:hover {
   background-color: #DDD
 }
 
-tr.clickable-row:hover > td[rowspan] {
-  background-color: white
-}
-
 img#logo {
   display:block;
   margin-left: auto;
@@ -36,4 +32,18 @@ div#logo {
 }
 .sidebar-sticky{
   padding-top:0px;
+}
+
+
+
+
+
+/* Footer */
+
+.footer {
+  margin: 0 auto;
+}
+
+.footer img {
+  max-height: 75px;
 }
